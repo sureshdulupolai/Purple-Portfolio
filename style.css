@@ -57,6 +57,7 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  /* Restored for left-aligned text */
   gap: 70px;
   background: radial-gradient(circle at 85% 30%, rgba(167, 139, 250, 0.3) 0%, rgba(255, 255, 255, 0) 70%), #ffffff;
   position: relative;
@@ -138,6 +139,8 @@ body {
   border-radius: 50%;
   position: relative;
   flex-shrink: 0;
+  margin-right: 7%;
+  /* Added to keep image away from the right edge */
 }
 
 .hero-img::before {
@@ -210,8 +213,10 @@ body {
   z-index: 5;
   font-size: 14px;
   color: #666;
-  margin-top: -25px; /* Overlap with BG text */
-  margin-bottom: 12px; /* Standardized tight gap */
+  margin-top: -25px;
+  /* Overlap with BG text */
+  margin-bottom: 12px;
+  /* Standardized tight gap */
 }
 
 /* STRIP */
@@ -1022,6 +1027,8 @@ h2 {
   .hero-img {
     width: 300px;
     height: 300px;
+    margin-right: 0;
+    /* Reset margin for mobile centering */
   }
 
   .tag {

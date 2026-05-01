@@ -90,10 +90,10 @@ body {
 
 /* Hero Section Container */
 .about-title-section {
-    padding-top: 100px; /* Standardized with other sections */
+    padding-top: 40px; /* Reduced to move heading up */
     padding-left: 8%;
     padding-right: 8%;
-    text-align: center; /* Centered as requested */
+    text-align: center;
     background-color: #fff;
     overflow: visible;
 }
@@ -102,8 +102,8 @@ body {
 .main-title {
     font-size: 2.2rem;
     font-weight: 800;
-    margin-bottom: 20px;
-    margin-top: -25px; /* Overlap with BG text */
+    margin-bottom: 50px; /* Increased gap between heading and label */
+    margin-top: 40px;
     color: #000;
     letter-spacing: -1px;
     position: relative;
@@ -118,33 +118,35 @@ body {
 }
 
 .skill-strip {
-    background: #a78bfa;
-    /* Vibrant purple matching the brand and target design */
+    background: linear-gradient(90deg, #a78bfa, #8b73e6);
+    /* Matched to home page gradient */
     padding: 18px 0;
-    transform: rotate(-3deg);
-    /* Image wala tilted effect */
-    width: 150%;
-    margin-left: -25%;
+    transform: rotate(-2deg);
+    /* Matched to home page rotation */
+    width: 125%; /* Increased for full width coverage */
+    margin-left: -12.5%; /* Centered alignment for full width */
     display: flex;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 1;
 }
 
-.strip-content {
+.strip-track {
     display: flex;
+    gap: 60px;
     white-space: nowrap;
-    animation: scroll-left 25s linear infinite;
+    width: max-content;
+    animation: scrollStrip 18s linear infinite;
 }
 
-.strip-content span {
-    font-size: 1.6rem;
-    font-weight: 700;
+.strip-track span {
+    font-size: 22px;
+    font-weight: 800;
     color: #fff;
-    padding: 0 50px;
     text-transform: uppercase;
 }
 
-/* Infinite Scroll Animation */
-@keyframes scroll-left {
+/* Infinite Scroll Animation matched to Home */
+@keyframes scrollStrip {
     0% {
         transform: translateX(0);
     }
@@ -332,7 +334,7 @@ body {
 /* ========================= */
 
 .about-right h1 {
-    font-size: 36px; /* Matched to home */
+    font-size: 28px; /* Reduced font size for better balance */
     font-weight: 800;
     line-height: 1.3;
 }
