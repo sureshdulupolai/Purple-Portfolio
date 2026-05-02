@@ -145,6 +145,30 @@ function loadProject() {
 
     prevBtn.href = `case-study.html?id=${prevId}`;
     nextBtn.href = `case-study.html?id=${nextId}`;
+
+    // Apply fade effect after loading
+    applyFadeEffect();
+}
+
+function applyFadeEffect() {
+    const observerOptions = {
+        threshold: 0.12
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll(
+        "section, .cs-hero-img-wrapper, .cs-tag, .process-card, .userflow-visual img"
+    ).forEach(el => {
+        el.classList.add("fade");
+        observer.observe(el);
+    });
 }
 
 window.addEventListener('DOMContentLoaded', loadProject);
