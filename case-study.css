@@ -182,7 +182,7 @@ section {
 }
 
 .cs-section-title.centered {
-    text-align: center;
+    text-align: left;
     margin-bottom: 60px;
 }
 
@@ -246,7 +246,7 @@ section {
 
 /* USERFLOW SECTION */
 .userflow-visual {
-    text-align: center;
+    text-align: left;
 }
 
 .userflow-visual img {
